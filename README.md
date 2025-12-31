@@ -74,7 +74,9 @@ sudo apt install libmariadb-dev
 
 sudo mariadb
 
-👉🏾 Importez la base de donnée Election sur votre SGBD
+👉🏾 Importez la base de donnée Election sur votre SGBD : Dans cette base de donnée il y'a des enregistrements d'un electeur (matricule : E0001; Nom : BRIA; Prenom : Dominique; idBureau : 1), des candidats et d'un administrateur(matricule : A0001; Nom : BRIA; Prenom : Dominique; idBureau : 1) pour le test dont vous pouviez modifier à votre guise tout en respectant la structure des matricules (commence par A pour les Administrateurs et par E pour les Electeurs)
+
+👉🏾 Ouvrir le fichier gestion_bd.cpp situer dans le dossier Serveur, afin de modifier user_name et password par les information de votre SGBD de votre base de donnée
 
 👉🏾 Cloner le projet
 
@@ -87,9 +89,6 @@ cd bureauVote
 ⚙️ Compilation et exécution
 
 🔹 Compilation du serveur
- 
- - Ouvrir le fichier gestion_bd.cpp situer dans le dossier Serveur,
- - afin de modifier user_name et password par les information de votre SGBD de votre base de donnée
    
 Copier le code Bash
 
@@ -99,7 +98,8 @@ g++ serveur_version3.cpp gestion_utilisateur.cpp gestion_bd.cpp -o serveur -lmar
 
 🔹 Compilation du client Qt
 
-Ouvrir le projet dans Qt Creator et Run
+- Ouvrir le projet dans Qt Creator et Run
+- Rempli les informations d'un Electeur(matricule : E0001; Nom : BRIA; Prenom : Dominique; idBureau : 1) ou d'un administrateur (matricule : A0001; Nom : BRIA; Prenom : Dominique; idBureau : 1)
 
 ✅ Vérification
 Le serveur démarre sans erreur
