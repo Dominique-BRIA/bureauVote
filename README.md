@@ -74,20 +74,26 @@ sudo apt install libmariadb-dev
 
 sudo mariadb
 
-👉🏾cloner le projet
-Copier le code
-Bash
+👉🏾 Importez la base de donnée Election sur votre SGBD
 
-git clone https://github.com/Dominique-BRIA/bureauVote
+👉🏾 Cloner le projet
 
+Copier le code Bash
+
+git clone https://github.com/Dominique-BRIA/bureauVote.git
 cd bureauVote
+
 
 ⚙️ Compilation et exécution
 
 🔹 Compilation du serveur
-
+ 
+ - Ouvrir le fichier gestion_bd.cpp situer dans le dossier Serveur,
+ - afin de modifier user_name et password par les information de votre SGBD de votre base de donnée
+   
 Copier le code Bash
 
+cd serveur
 g++ serveur_version3.cpp gestion_utilisateur.cpp gestion_bd.cpp -o serveur -lmariadb
 ./server
 
@@ -100,3 +106,5 @@ Le serveur démarre sans erreur
 MySQL fonctionne
 Le client se connecte au serveur
 Les requêtes passent correctement
+
+Attention : Lancer d'abord le serveur avant de lancer de l'application client, n'oubliez pas d'ouvrir le fichier gestion_bd.cpp situer dans le dossier serveur, afin de modifier user_name et password de votre SGBD
