@@ -6,7 +6,9 @@ Il s'agit d'un projet scolaire individuel de développement d'un bureau de vote 
 ▪︎ Explorer la communication interprocessus via les sockets
 ▪︎ Explorer la synchronisation des threads (mutex, condition variable...)
 ▪︎ Etc...
+
 ⚙️ Fonctionnalités principales
+
 ▪︎ 🗳️ Système de vote (simulation ou réel selon le contexte)
 ▪︎ 📊 Comptage automatique des voix
 ▪︎ 📈 Affichage des résultats
@@ -18,43 +20,58 @@ Framework : Qt (Application Client)
 🚀 Installation (Linux)
 
 🧩 Architecture du projet
+
 🖥️ Client : Application Qt C++ (interface utilisateur)
 🧠 Serveur : Application C++ (connexion MySQL, logique métier)
 🗄️ Base de données : MySQL
 🔌 Communication : Socket TCP
+
 🛠️ Prérequis système
-Copier le code
-Bash
+
+  - Mise à jour du syteme linux
+    
+Copier le Bash
+
 sudo apt update && sudo apt upgrade
+
 Installer les outils de base :
-Copier le code
-Bash
+
+Copier le code Bash
+
 sudo apt install build-essential cmake git
+
 🖥️ Installation du client Qt
-Copier le code
-Bash
+
+Copier le code Bash
+
 sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+
 Modules Qt utilisés côté client :
+
 QtCore
 QtGui
 QtWidgets
 QtNetwork
-🧠 Installation du serveur C++
-🔹 MySQL Server
-Copier le code
-Bash
-sudo apt install mysql-server
-Copier le code
-Bash
-sudo systemctl start mysql
-🔹 Librairies MySQL pour C++
-Choisis une seule méthode :
-✅ Option recommandée — MySQL Connector/C++
-Copier le code
-Bash
-sudo apt install libmysqlcppconn-dev
-Utilisé par le serveur C++ pour se connecter à MySQL.
-🔹 Configuration de la base de donnée
+
+🌐 Installation d’Apache2
+sudo apt install apache2
+
+
+Vérification :
+
+http://localhost
+
+🗄️ Installation de MariaDB
+
+sudo apt install mariadb-server mariadb-client
+sudo mysql_secure_installation
+
+🔧 Librairies MariaDB pour le serveur C++
+sudo apt install libmariadb-dev
+
+🗃️ Configuration de la base de données
+sudo mariadb
+
 👉🏾cloner le projet
 Copier le code
 Bash
