@@ -9,7 +9,7 @@ using namespace std;
 /* Configuration */
 
 const char* user_name = "root";
-const char* password = "555508";
+const char* password = "";
 
 MYSQL* conn;
 MYSQL_ROW row;
