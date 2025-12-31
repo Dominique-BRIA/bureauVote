@@ -54,8 +54,8 @@ QtWidgets
 QtNetwork
 
 🌐 Installation d’Apache2
-sudo apt install apache2
 
+sudo apt install apache2
 
 Vérification :
 
@@ -67,37 +67,33 @@ sudo apt install mariadb-server mariadb-client
 sudo mysql_secure_installation
 
 🔧 Librairies MariaDB pour le serveur C++
+
 sudo apt install libmariadb-dev
 
 🗃️ Configuration de la base de données
+
 sudo mariadb
 
 👉🏾cloner le projet
 Copier le code
 Bash
-git clone https://github.com/votre-utilisateur/bureau-de-vote.git
-cd bureau-de-vote
+
+git clone https://github.com/Dominique-BRIA/bureauVote
+
+cd bureauVote
+
 ⚙️ Compilation et exécution
+
 🔹 Compilation du serveur
-Copier le code
-Bash
-cd server
-mkdir build
-cd build
-cmake ..
-make
+
+Copier le code Bash
+
+g++ serveur_version3.cpp gestion_utilisateur.cpp gestion_bd.cpp -o serveur -lmariadb
 ./server
+
 🔹 Compilation du client Qt
-Copier le code
-Bash
-cd client
-mkdir build
-cd build
-cmake ..
-make
-./client
-Ou via Qt Creator.
-🔌 Communication client–serveur
+
+Ouvrir le projet dans Qt Creator et Run
 
 ✅ Vérification
 Le serveur démarre sans erreur
